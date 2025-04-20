@@ -15,5 +15,4 @@ openai
 faiss-cpu
 altair
 tiktoken
-pysqlite3==0.4.6
 langchain-google-genai

@@ -16,6 +16,10 @@ load_dotenv()
 # Uncomment the line below if you need to set the API key directly in code
 # os.environ["GOOGLE_API_KEY"] = "your-api-key-here"
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 def get_vectorstore_from_url(url):
     # get the text in document form
     loader = WebBaseLoader(url)

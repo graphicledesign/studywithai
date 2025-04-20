@@ -16,3 +16,4 @@ faiss-cpu
 altair
 tiktoken
 langchain-google-genai
+pysqlite3-binary

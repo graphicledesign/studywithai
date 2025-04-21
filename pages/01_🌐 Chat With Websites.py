@@ -31,7 +31,11 @@ def get_vectorstore_from_url(url):
     
     # create a vectorstore from the chunks - specifying the required model parameter
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-    vector_store = Chroma.from_documents(document_chunks, embeddings)
+    vector_store = Chroma.from_documents(
+    document_chunks,
+    embeddings,
+    persist_directory="./chroma_db"  # Or any folder where it can save the database
+    )
 
     return vector_store
 
